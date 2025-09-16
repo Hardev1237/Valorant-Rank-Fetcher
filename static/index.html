@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Rank Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Valorant Rank Checker</h1>
+        <form id="rank-form">
+            <input type="text" id="in_game_name" name="in_game_name" placeholder="In-game Name" required>
+            <input type="text" id="hashtag" name="hashtag" placeholder="Hashtag" required>
+            <input type="text" id="account_username" name="account_username" placeholder="Username (Optional)">
+            <input type="password" id="password" name="password" placeholder="Password (Optional)">
+            <select id="region" name="region">
+                <option value="na">North America</option>
+                <option value="eu">Europe</option>
+                <option value="ap">Asia Pacific</option>
+                <option value="kr">Korea</option>
+                <option value="latam">Latin America</option>
+                <option value="br">Brazil</option>
+            </select>
+            <select id="save_to_section" name="save_to_section"></select>
+            <div class="form-buttons">
+                <button type="submit">Check Rank</button>
+                <button type="button" id="save-button">Save Account</button>
+            </div>
+        </form>
+        
+        <div id="result-container" class="result">
+            <h2 id="player-name"></h2>
+            <p id="player-rank"></p>
+            <p id="player-rr"></p>
+            <p id="error-message" class="error"></p>
+        </div>
+
+        <div id="credentials-display-container">
+            <h2>Saved Credentials</h2>
+            <p id="username-display"></p>
+            <p id="password-display"></p>
+        </div>
+        
+        <div id="saved-accounts">
+            <h2>Saved Accounts</h2>
+            <div id="saved-accounts-list"></div>
+            <form id="section-form">
+                <input type="text" id="new_section_name" placeholder="New Section Name" required>
+                <button type="submit">Add Section</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
